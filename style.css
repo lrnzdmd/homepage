@@ -217,7 +217,7 @@ footer {
     width: 30%;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     
     
     
@@ -416,7 +416,7 @@ footer {
     
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     
     header {
         width: 100%;
