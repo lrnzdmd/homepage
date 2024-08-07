@@ -15,6 +15,18 @@ header {
     padding-top: 2rem;
 }
 
+@keyframes slideIn {
+    0% {
+        transform: rotate(360deg) scale(20);
+        
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+
 header::before {
     content: "";
     position: absolute;
@@ -25,8 +37,8 @@ header::before {
     background-color: #3192b4;
     clip-path: polygon(0 0, 100% 0, 100% 30%, 0 80%);
     z-index: -1;
+    animation: slideIn 1s ease-in-out;
 }
-
 
 .headerimgcontainer img {
     height:40rem;
@@ -92,27 +104,33 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 section h3 {
+    align-self: flex-start;
     font-weight: 600;
-    margin-left: 10rem;
+    margin-left: 12rem;
     font-size: 3rem;
 }
 
 .projectgrid {
-    margin:8rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    margin-bottom: 2rem;
 }
 
 .griditem {
     width: 30rem;
     height: 40rem;
     box-shadow: 0px 0px 5px #2C2C2C;
+    transition:  transfrom 0.3s ease-in-out;
+}
 
+.griditem:hover {
+    transform: translateY(5px);
 }
 
 .griditem img {
@@ -122,6 +140,7 @@ section h3 {
 .projectinfo {
     display:flex;
     flex-direction: column;
+    background-color: #F5F5F5;
 }
 
 .projectinfo p {
@@ -143,4 +162,50 @@ section h3 {
 
 .iconsdiv img {
     width: 2rem;
+}
+
+footer {
+    background-color: #3192b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color:#F5F5F5;
+}
+
+footer img {
+    width:40%;
+}
+
+.contactsection img {
+    width: 2rem;
+}
+
+.contactsection {
+    max-width: 20%;
+    font-size: 1.4rem;
+}
+
+.contactsection h5 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.flexr {
+    display: flex;
+    gap: 0.6rem;
+}
+
+
+.iconscontainerfooter {
+    width:16rem;
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.iconscontainerfooter img {
+    width: 30%;
 }
